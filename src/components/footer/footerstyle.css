@@ -1,0 +1,85 @@
+/* footerstyle.css */
+
+/* Estilos generales para el footer */
+.footer {
+    margin-top: -1%;
+    font-weight: 600;
+    background-color: orange;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+.footer p{
+    font-size: small;
+}
+  #title{
+    font-size: 2vb;
+  }
+  
+  /* Estilos para la sección izquierda del footer */
+  .left-row {
+    flex: 1;
+    max-width: 40%;
+    text-align: center;
+  }
+  
+  .left-row img {
+    border-radius: 15px;
+    max-width: 30%;
+    height: auto;
+  }
+  
+  /* Estilos para la sección del medio del footer */
+  .mid-row {
+    flex: 1;
+    max-width: 25%;
+    text-align: center;
+  }
+  
+  .mid-row a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.4vw;
+  }
+  
+  /* Estilos para la sección derecha del footer */
+  .right-row {
+    flex: 1;
+    max-width: 30%;
+    text-align: center;
+  }
+  
+  .right-row p {
+    margin-bottom: 5px;
+  }
+  
+  /* Media query para estilos responsive */
+  @media (max-width: 768px) {
+    .footer {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .mid-row a {
+        color: #fff;
+        margin: 0 10px;
+        font-size: 5vw;
+      }
+
+  
+    .left-row,
+    .mid-row,
+    .right-row {
+      max-width: 100%;
+      margin-bottom: 15px;
+    }
+  
+    .left-row img {
+      width: 60%;
+      height: auto;
+    }
+  }
+  

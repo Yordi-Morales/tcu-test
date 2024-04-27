@@ -1,0 +1,135 @@
+.baby-class {
+    background-image: url('https://images.pexels.com/photos/15961906/pexels-photo-15961906/free-photo-of-black-and-white-photo-of-baby-lying-between-parents.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding: 20px;
+    height: 800px;
+    position: relative;
+    overflow: hidden;
+    
+    /* Asegura que el contenido esté por encima de la máscara azul */
+  }
+.baby-class h4{
+  text-align: center;
+}
+
+.baby-content p{
+  margin-top: 1%;
+  left: 5%;
+  font-size: small;
+  width: 35%;
+  position: absolute;
+  z-index: 999;
+  color: white;
+}
+
+.table-title {
+  font-size: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    padding-bottom: 50px!important; /* Espacio entre el título y la tabla */
+    margin-bottom: 20px; /* Espacio entre el título y la tabla */
+  }
+
+  .table-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+thead {
+    color: orange;
+}
+
+.table-baby {
+  margin-top: 6%;
+    color: white;
+  border-radius: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  background: rgba(171, 171, 172, 0.562);
+  /* Green background with 30% opacity */
+  position: relative;
+  z-index: 2;
+ 
+
+}
+
+
+
+  .table-wrapper {
+    overflow-x: auto; /* Añade desplazamiento horizontal si es necesario */
+  }
+
+.blue-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(6, 1, 59, 0.568);
+    z-index: 0;
+  }
+
+
+
+.table-baby th {
+    font-size: xx-large;
+    padding-bottom: 1vh;
+    padding-left: 8vh;
+    padding-right: 8vh;
+    text-align: center;
+}
+
+.table-baby td {
+    font-weight: 500;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+  .table-title {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 80%;
+    font-size: 4.2vw;
+    margin-bottom: -7%;
+  }
+
+  .baby-class{
+    height: 600px;
+  }
+
+  .table-baby{
+    padding-bottom: 10%;
+  }
+
+  .table-baby th {
+    font-size:medium;
+    padding-bottom: 1vh;
+    padding-left: 4vh;
+    padding-right: 4vh;
+    text-align: center;
+}
+
+.table-baby td {
+  font-size: small;
+  } 
+  .table-baby {
+  width: 100%;
+  }
+
+  .baby-content p{
+    right: 0%;
+  margin-top: 2%;
+  font-size: small;
+  width: 95%;
+  }
+}
