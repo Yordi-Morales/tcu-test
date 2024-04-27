@@ -33,7 +33,7 @@ const BabyTable = () => {
       </Container>
       <p>*Los precios de pañales suministrados estan basados en la tabla de referencia de una fabricada de pañales asi como sus precios. 
         Los precios son solo una referencia general de los costos que implica el tener un bebe. No se contemplaron productos los cuales
-        pueden variar mucho como lo son prendas de vestir, medicinas entre otras
+        pueden variar mucho como lo son prendas de vestir, medicinas entre otras.
         
          </p>
     </div>
