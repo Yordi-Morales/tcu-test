@@ -15,8 +15,8 @@ const Footer = () => {
       </div>
       <div className='mid-row'>
         <p id="title">Siguenos</p>
-        <a target="_blank" rel="noopener noreferrer" href='https://open.spotify.com/show/6grXCR9BoUiYxWJMFe0KMO'><i class="fa fa-spotify" aria-hidden="true"></i></a>
-        <a target="_blank" rel="noopener noreferrer" href='https://www.instagram.com/saludfinancierautnsc/'><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        <a target="_blank" rel="noopener noreferrer" href='https://open.spotify.com/show/6grXCR9BoUiYxWJMFe0KMO' aria-label="Instagram"><i class="fa fa-spotify" aria-hidden="true"></i></a>
+        <a target="_blank" rel="noopener noreferrer" href='https://www.instagram.com/saludfinancierautnsc/' aria-label="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
       </div>
       <div className='right-row'>
         <p id="title">Contacto</p>
