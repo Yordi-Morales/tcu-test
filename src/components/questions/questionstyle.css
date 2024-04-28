@@ -1,0 +1,208 @@
+.quiz-container {
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    flex-direction: column;
+    background-color: #ebebebbc;
+    z-index: 1;
+}
+
+
+.main-quiz{
+     background-image: url('https://d24x9can9aadud.cloudfront.net/wp-content/uploads/sites/3/2018/09/Upset-Couple.jpg');
+    height: 90vh;
+    background-size: cover;
+    background-position: unset;
+    width: auto;
+    z-index: -1;
+}
+
+
+
+
+.main-window {
+    text-align: center;
+}
+
+.main-window button{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 20%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #0e287c;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+}
+
+.main-window button:hover{
+    color:orange;
+}
+
+.centered button{
+    margin-top: 10px;
+}
+
+.centered p{
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #767676;
+}
+
+.buttons-bottom{
+    width: 100%;
+    text-align: center;
+}
+.buttons-bottom button{
+    margin-left: 1.2%;
+    width: 20%;
+    padding: 7px;
+    border: none;
+    border-radius: 4px;
+    background-color: #0e287c;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+
+}
+
+.buttons-bottom button:hover{
+    color: orange;
+}
+
+.main-window h2 {
+    margin-top: -5%;
+    margin-bottom: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+.main-window p {
+    margin-bottom: 5%;
+    font-weight: bold;
+}
+
+.question-container {
+    margin-bottom: 20px;
+}
+
+
+
+#nxt-btn{
+    margin-bottom: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 40%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #0e287c;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+}
+
+#nxt-btn:hover{
+    color: orange;
+}
+.select-wrapper {
+    margin-bottom: 40px;
+  }
+  
+  .select-wrapper select {
+    color: #737373;
+    margin-top: -15px;
+    width: 100%;
+    padding: 2px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    outline: none;
+  }
+
+  .test{
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+
+  }
+  
+  .select-wrapper select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+.result{
+    position: relative;
+    width: 60%;
+    display: flex;
+    font-size: small;
+    gap: 4%;
+    align-items: center;
+    justify-content: center;
+    font-size: medium;
+}
+
+.result button:hover{
+    color: orange;
+}
+
+@media (max-width: 768px) {
+    .quiz-container {
+        font-size: 14px;
+        width: 90%;
+    }
+
+    .centered p{
+        width: 100%;
+    }
+
+    #opt{
+        position: absolute!important;
+        margin-left: -15%!important;
+        width: auto;
+        padding-right: -8px!important;
+        font-size: 65%;
+      }
+      .quiz-container {
+        margin-top: 5%;
+        width: 98%;
+
+    }
+    .test{
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    
+      }
+
+      .buttons-bottom button{
+        width: 33%;
+    }
+
+    .main-window h2 {
+
+        width: 100%;
+    }
+    
+
+}
+
+@media (max-width: 380px) {
+
+    .main-quiz{
+        height: 100vh;
+    }
+}

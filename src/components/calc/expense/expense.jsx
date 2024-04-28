@@ -112,7 +112,7 @@ const FinancialCalculatorInput = () => {
 
     return (
         <div className="financial-calculator-container">
-            <h2>Aqui podras realizar un control de tus gastos</h2>
+            <h2>Realiza un control de sus gastos anuales</h2>
             <div className="totals">
                 <h4>Total Neto: {calcularTotalNeto()}</h4>
             </div>

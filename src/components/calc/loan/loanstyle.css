@@ -1,0 +1,95 @@
+.loan {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5%;
+    padding-bottom: 5%;
+}
+
+
+.loan h2{
+  text-align: center;
+}
+
+.form-group {
+    font-weight: 650;
+    margin-bottom: 7%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loan label {
+    text-align: center;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.loan input {
+    width: 40%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.error-message {
+    text-align: center;
+    color: red;
+    margin-top: 10px;
+}
+
+.result {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.2vw;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.loan button {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 40%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #0e287c;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .loan {
+        padding: 10px;
+        margin-bottom: 30px;
+    }
+    .loan h2{
+        margin-top: 5%;
+        margin-bottom: 10%;
+    }
+
+
+    .loan input {
+        padding: 8px;
+    }
+
+    .loan button {
+        font-size: 14px;
+    }
+
+    .loan button {
+        margin-bottom: 5%;
+    }
+    
+}

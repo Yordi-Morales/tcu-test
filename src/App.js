@@ -7,6 +7,8 @@ import Spotify from './components/spotify/spotify';
 import Home from './components/home/home';
 import Navigation from './components/navbar/navbar';
 import CalcExpense from './components/calc/expense/expense';
+import CalcLoan from './components/calc/loan/loan';
+import Financialquiz from './components/questions/questions';
 
 import './App.css';
 
@@ -21,6 +23,8 @@ const App = () => {
           <Route path="/baby-table" element={<BabyTable />} />
           <Route path="/podcast" element={<Spotify />} />
           <Route path="/calc-expenses" element={<CalcExpense />} />
+          <Route path="/calc-loan" element={<CalcLoan />} />
+          <Route path="/financial-quest" element={<Financialquiz />} />
         </Routes>
         <Footer />
       </div>

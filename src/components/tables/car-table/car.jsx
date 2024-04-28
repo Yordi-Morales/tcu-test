@@ -30,8 +30,8 @@ const CarTable = () => {
         <h4>Total:₡186000</h4>
 
       </Container>
-      <p>*Los precios y productos aqui suministrados son basados en los costos promedio de mantenimiento de un vehiculo tipo automovil en un año
-        y no incluyen costos extras como marchamo, repuestos,compustible o revision vehicular</p>
+      <p>*Los precios y productos suministrados son basados en los costos promedio de mantenimiento de un vehículo tipo automóvil en un año
+        y no incluyen costos extras como marchamo, repuestos,compustible o revisión vehícular</p>
     </div>
     
     <div className="blue-overlay"></div>

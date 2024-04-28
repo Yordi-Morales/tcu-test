@@ -33,16 +33,32 @@ const Navigation = () => {
             <Link to="/podcast" className={location.pathname === '/podcast' ? 'active-link' : ''} onClick={closeMenu}>Podcast</Link>
           </li>
           <li>
+            <Link to="/financial-quest" className={location.pathname === '/financial-quest' ? 'active-link' : ''} onClick={closeMenu}>Compatibilidad Pareja</Link>
+          </li>
+          <li>
             <a href="https://sirucalculadora.com/" target="_blank" rel="noopener noreferrer" className='siru' onClick={closeMenu}>SIRU</a>   
           </li>
-          <li>
-            <Link to="/calc-expenses" className={location.pathname === '/calc-expenses' ? 'active-link' : ''} onClick={closeMenu}>Calcular Gastos</Link>
+          <li className='dropdown'>
+            <span>Calculadoras</span>
+            <ul>
+              <li>
+                <Link to="/calc-expenses" className={location.pathname === '/calc-expenses' ? 'active-link' : ''} onClick={closeMenu}>Calcular Gastos</Link>
+              </li>
+              <li>
+                <Link to="/calc-loan" className={location.pathname === '/calc-loan' ? 'active-link' : ''} onClick={closeMenu}>Calcular Crédito</Link>
+              </li>
+            </ul>
           </li>
-          <li>
-            <Link to="/baby-table" className={location.pathname === '/baby-table' ? 'active-link' : ''} onClick={closeMenu}>Costo Recién Nacido</Link>
-          </li>
-          <li>
-            <Link to="/cars-table" className={location.pathname === '/cars-table' ? 'active-link' : ''} onClick={closeMenu}>Costo Vehículo</Link>
+          <li className='dropdown'>
+            <span>Costos</span>
+            <ul>
+              <li>
+                <Link to="/baby-table" className={location.pathname === '/baby-table' ? 'active-link' : ''} onClick={closeMenu}>Costo Recién Nacido</Link>
+              </li>
+              <li>
+                <Link to="/cars-table" className={location.pathname === '/cars-table' ? 'active-link' : ''} onClick={closeMenu}>Costo Vehículo</Link>
+              </li>
+            </ul>
           </li>
         </ul>
         <div className='social'>
