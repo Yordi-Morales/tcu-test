@@ -30,9 +30,18 @@ const FinancialCalculatorInput = () => {
     };
 
     const handleMontoIngresoChange = (event, index) => {
+        const value = event.target.value === '' ? 0 : parseFloat(event.target.value);
         const newIngresos = [...ingresos];
-        newIngresos[index].monto = event.target.value || 0; // Si event.target.value es null, asigna 0
+        newIngresos[index].monto = value;
         setIngresos(newIngresos);
+    };
+
+    const handleMontoIngresoBlur = (index) => {
+        const newIngresos = [...ingresos];
+        if (newIngresos[index].monto === '' || isNaN(newIngresos[index].monto)) {
+            newIngresos[index].monto = 0;
+            setIngresos(newIngresos);
+        }
     };
 
     const handleNombreGastoChange = (event, index) => {
@@ -42,9 +51,18 @@ const FinancialCalculatorInput = () => {
     };
 
     const handleMontoGastoChange = (event, index) => {
+        const value = event.target.value === '' ? 0 : parseFloat(event.target.value);
         const newGastos = [...gastos];
-        newGastos[index].monto = event.target.value|| 0; ;
+        newGastos[index].monto = value;
         setGastos(newGastos);
+    };
+
+    const handleMontoGastoBlur = (index) => {
+        const newGastos = [...gastos];
+        if (newGastos[index].monto === '' || isNaN(newGastos[index].monto)) {
+            newGastos[index].monto = 0;
+            setGastos(newGastos);
+        }
     };
 
     const handleAgregarIngreso = () => {
@@ -76,10 +94,11 @@ const FinancialCalculatorInput = () => {
     const calcularTotal = (lista) => {
         let total = 0;
         lista.forEach((item) => {
+            const monto = isNaN(parseFloat(item.monto)) ? 0 : parseFloat(item.monto);
             if (item.tipoPeriodo === 'anual') {
-                total += parseFloat(item.monto);
+                total += monto;
             } else {
-                total += parseFloat(item.monto) * 12;
+                total += monto * 12;
             }
         });
         return total;
@@ -93,20 +112,12 @@ const FinancialCalculatorInput = () => {
 
     const exportToExcel = () => {
         const wb = XLSX.utils.book_new();
-
-        // Crear copias de los objetos de ingresos y gastos sin la propiedad id
         const incomesData = ingresos.map(({ id, tipoPeriodo, nombre, monto }) => ({ Tipo_Periodo: tipoPeriodo, Nombre: nombre, Monto: monto }));
         const expensesData = gastos.map(({ id, tipoPeriodo, nombre, monto }) => ({ Tipo_Periodo: tipoPeriodo, Nombre: nombre, Monto: monto }));
-
-        // Crear hojas de cálculo para Ingresos y Gastos con nombres personalizados
         const incomesSheet = XLSX.utils.json_to_sheet(incomesData);
         const expensesSheet = XLSX.utils.json_to_sheet(expensesData);
-
-        // Agregar las hojas de cálculo al libro
         XLSX.utils.book_append_sheet(wb, incomesSheet, 'Ingresos');
         XLSX.utils.book_append_sheet(wb, expensesSheet, 'Gastos');
-
-        // Descargar el archivo
         XLSX.writeFile(wb, 'financial_data.xlsx');
     };
 
@@ -140,12 +151,12 @@ const FinancialCalculatorInput = () => {
                                 type="number"
                                 value={ingreso.monto}
                                 onChange={(event) => handleMontoIngresoChange(event, index)}
+                                onBlur={() => handleMontoIngresoBlur(index)}
                             />
-                            <button onClick={() => handleEliminarIngreso(ingreso.id)} className='delete-btn misc-btn'><i class="fa fa-minus"></i></button>
+                            <button onClick={() => handleEliminarIngreso(ingreso.id)} className='delete-btn misc-btn'><i className="fa fa-minus"></i></button>
                         </div>
                     ))}
                     <button onClick={handleAgregarIngreso} className='add-btn misc-btn'>Agregar ingreso</button>
-
                 </div>
 
                 <div className="expense columni">
@@ -171,16 +182,15 @@ const FinancialCalculatorInput = () => {
                                 type="number"
                                 value={gasto.monto}
                                 onChange={(event) => handleMontoGastoChange(event, index)}
+                                onBlur={() => handleMontoGastoBlur(index)}
                             />
-                            <button onClick={() => handleEliminarGasto(gasto.id)} className='delete-btn misc-btn'><i class="fa fa-minus"></i></button>
+                            <button onClick={() => handleEliminarGasto(gasto.id)} className='delete-btn misc-btn'><i className="fa fa-minus"></i></button>
                         </div>
-
                     ))}
                     <button onClick={handleAgregarGasto} className='add-btn misc-btn'>Agregar gasto</button>
                 </div>
             </div>
-
-            <button onClick={exportToExcel} className="export-button">Descargar Excel</button>
+            <button onClick={exportToExcel} className='excel-btn'>Exportar a Excel</button>
         </div>
     );
 };
